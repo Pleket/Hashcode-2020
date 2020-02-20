@@ -33,6 +33,10 @@ public class RandomSolver {
         Solution sol = new Solution(lib, books, days);
         optimalScore = sol.solve();
         librariesSigned = sol.curlib;
+
+        Output output = new Output();
+        output.output(librariesSigned, lib, sol.noscanned, sol.scannedIds);
+        //System.out.println(optimalScore);
     }
 
     public ArrayList<Library> getSolution() {

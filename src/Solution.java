@@ -13,8 +13,8 @@ public class Solution {
 
     ArrayList<Integer> bookpos;
 
-    ArrayList<Integer> noscanned;
-    ArrayList<ArrayList<Integer>> scannedIds;
+    public ArrayList<Integer> noscanned;
+    public ArrayList<ArrayList<Integer>> scannedIds;
 
     int curlib = 0;
     int day = 0;

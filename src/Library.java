@@ -6,8 +6,6 @@ public class Library {
     int days;
     int scannable;
 
-    public Library() { }
-
     public Library(int t, int m, Collection<Integer> bookIDs) {
         this.days = t;
         this.scannable = m;

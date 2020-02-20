@@ -9,7 +9,8 @@ public class Main {
 
     private void run() {
         parse();
-        
+        Solution sol = new Solution(lib, books);
+        sol.solve();
     }
 
     private void parse() {

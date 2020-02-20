@@ -42,6 +42,7 @@ public class Parser {
             }
             Library libnew = new Library(t, m, bookIDs, i);
             lib.add(libnew);
+            //do nothings
             libnew.value = (double) value;
         }
         return lib;

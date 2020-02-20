@@ -24,6 +24,12 @@ public class RandomSolver {
 
     public void solve() {
         Collections.shuffle(lib);
+
+        /* Also shuffle books. */
+        for (Library l: lib) {
+            Collections.shuffle(l.books);
+        }
+
         Solution sol = new Solution(lib, books, days);
         optimalScore = sol.solve();
         librariesSigned = sol.curlib;

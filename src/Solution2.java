@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Solution {
+public class Solution2 {
 
     HashSet<Integer> scannedBooks = new HashSet<>();
 
@@ -19,7 +19,7 @@ public class Solution {
     int curlib = 0;
     int day = 0;
 
-    public Solution(ArrayList<Library> libs, ArrayList<Integer> bookscores, int days) {
+    public Solution2(ArrayList<Library> libs, ArrayList<Integer> bookscores, int days) {
         this.libs = libs;
         this.scores = bookscores;
         this.days = days;
@@ -76,6 +76,7 @@ public class Solution {
                 curlib += 1;
 
                 if (curlib < libs.size()) {
+                    
                     current = libs.get(curlib);
                     daysuntiladded = current.days;
                 }

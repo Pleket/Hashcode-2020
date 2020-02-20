@@ -19,7 +19,7 @@ public class Library implements Comparable {
     @Override
     public int compareTo(Object obj) {
         Library comp = (Library) obj;
-        return -Double.compare(this.scannable * this.value / this.days, comp.scannable * comp.value / comp.days);
+        return -Double.compare(this.value / this.days, comp.value / comp.days);
     }
 
 }

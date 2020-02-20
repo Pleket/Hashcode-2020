@@ -9,11 +9,7 @@ public class Output {
             for (int j = 0; j < bookAmounts.get(id) - 1; j++) {
                 System.out.print(bookIDs.get(id).get(j) + " ");
             }
-            if (bookAmounts.get(id) > 0) {
-                System.out.println(bookIDs.get(id).get(bookIDs.get(id).size() - 1));
-            } else {
-                System.out.print("");
-            }
+            System.out.println(bookIDs.get(id).get(bookIDs.get(id).size() - 1));
         }
     }
 }

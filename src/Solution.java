@@ -12,6 +12,7 @@ public class Solution {
     long score;
 
     ArrayList<Integer> bookpos;
+    
 
     int curlib = 0;
     int day = 0;

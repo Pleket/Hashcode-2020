@@ -7,16 +7,19 @@ public class Main {
 
     ArrayList<Integer> books;
 
+    int days;
+
     private void run() {
         parse();
-        Solution sol = new Solution(lib, books);
-        sol.solve();
+        RandomSolver solver = new RandomSolver(lib, books, days);
+        solver.solve();
     }
 
     private void parse() {
         Parser parser = new Parser();
         books = parser.getBooks();
         lib = parser.getLibraries();
+        days = parser.getDays();
     }
 
     public static void main(String[] args) {

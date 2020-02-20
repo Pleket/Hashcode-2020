@@ -13,6 +13,8 @@ public class Main {
         parse();
         RandomSolver solver = new RandomSolver(lib, books, days);
         solver.solve();
+        lib = solver.getSolution();
+
     }
 
     private void parse() {

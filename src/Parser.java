@@ -29,11 +29,11 @@ public class Parser {
             int n = scanner.nextInt();
             int t = scanner.nextInt();
             int m = scanner.nextInt();
-            Collection<Integer> bookIDs = new ArrayList<Integer>();
+            ArrayList<Integer> bookIDs = new ArrayList<Integer>();
             for (int j = 0; j < n; j++) {
                 bookIDs.add(scanner.nextInt());
             }
-            lib.add(new Library(t, m, bookIDs));
+            lib.add(new Library(t, m, bookIDs, i));
         }
         return lib;
     }

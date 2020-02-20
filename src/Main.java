@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Main {
@@ -9,22 +10,22 @@ public class Main {
 
     int days;
 
-    private void run() {
+    private void run() throws FileNotFoundException {
         parse();
-        RandomSolver solver = new RandomSolver(lib, books, days);
-        solver.solve();
-        lib = solver.getSolution();
+        SoortVanRandom solver = new SoortVanRandom(lib, books, days);
+/*        solver.solve();
+        lib = solver.getSolution();*/
 
     }
 
-    private void parse() {
+    private void parse() throws FileNotFoundException {
         Parser parser = new Parser();
         books = parser.getBooks();
         lib = parser.getLibraries();
         days = parser.getDays();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Main solution = new Main();
         solution.run();
     }

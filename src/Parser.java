@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 
 public class Parser {
@@ -9,9 +11,9 @@ public class Parser {
 
     private ArrayList<Integer> books;
 
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(new File("C:\\Users\\20182602\\Desktop\\f_libraries_of_the_world.txt"));
 
-    public Parser() {
+    public Parser() throws FileNotFoundException {
         b = scanner.nextInt();
         l = scanner.nextInt();
         d = scanner.nextInt();

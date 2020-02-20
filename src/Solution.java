@@ -12,7 +12,9 @@ public class Solution {
     long score;
 
     ArrayList<Integer> bookpos;
-    
+
+    ArrayList<Integer> noscanned;
+    ArrayList<ArrayList<Integer>> scannedIds;
 
     int curlib = 0;
     int day = 0;
@@ -22,6 +24,13 @@ public class Solution {
         this.scores = bookscores;
         this.days = days;
         bookpos = new ArrayList<>(libs.size());
+        noscanned = new ArrayList<>(libs.size());
+        scannedIds = new ArrayList<>(libs.size());
+
+        for (int i = 0; i < libs.size(); i++) {
+            scannedIds.add(new ArrayList<>());
+        }
+
     }
 
     public long solve() {
@@ -46,7 +55,11 @@ public class Solution {
 
                         if (scannedBooks.contains(book)) { pos++; b--; continue; }
 
+                        noscanned.set(now.id, noscanned.get(now.id) + 1);
+                        scannedIds.get(now.id).add(book);
+
                         score += scores.get(book);
+                        scannedBooks.add(book);
 
                     } else {break;}
 

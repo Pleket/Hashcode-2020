@@ -1,6 +1,4 @@
-import java.io.FileNotFoundException;
 import java.util.*;
-import java.io.File;
 
 public class Parser {
     private int b;
@@ -9,16 +7,9 @@ public class Parser {
 
     private int d;
 
-    File file = new File("C:\\Users\\20182290\\Downloads\\d_tough_choices.txt");
-
-    Scanner scanner;
+    Scanner scanner = new Scanner(System.in);
 
     public Parser() {
-        try {
-            scanner = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            scanner = new Scanner(System.in);
-        }
         b = scanner.nextInt();
         l = scanner.nextInt();
         d = scanner.nextInt();

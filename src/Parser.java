@@ -7,8 +7,6 @@ public class Parser {
 
     int d;
 
-
-
     Scanner scanner = new Scanner(System.in);
 
     public Parser() {
@@ -26,6 +24,17 @@ public class Parser {
     }
 
     public ArrayList<Library> getLibraries() {
-
+        ArrayList<Library> lib = new ArrayList<Library>();
+        for (int i = 0; i < l; i++) {
+            int n = scanner.nextInt();
+            int t = scanner.nextInt();
+            int m = scanner.nextInt();
+            Collection<Integer> bookIDs = new ArrayList<Integer>();
+            for (int j = 0; j < n; j++) {
+                bookIDs.add(scanner.nextInt());
+            }
+            lib.add(new Library(t, m, bookIDs));
+        }
+        return lib;
     }
 }

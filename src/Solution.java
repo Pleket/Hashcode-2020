@@ -28,6 +28,8 @@ public class Solution {
         scannedIds = new ArrayList<>(libs.size());
 
         for (int i = 0; i < libs.size(); i++) {
+            bookpos.add(0);
+            noscanned.add(0);
             scannedIds.add(new ArrayList<>());
         }
 
@@ -64,6 +66,7 @@ public class Solution {
                     } else {break;}
 
                 }
+                bookpos.set(i, pos + now.scannable);
 
 
             }

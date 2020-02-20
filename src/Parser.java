@@ -1,11 +1,11 @@
 import java.util.*;
 
 public class Parser {
-    int b;
+    private int b;
 
-    int l;
+    private int l;
 
-    int d;
+    private int d;
 
     Scanner scanner = new Scanner(System.in);
 
@@ -36,5 +36,9 @@ public class Parser {
             lib.add(new Library(t, m, bookIDs));
         }
         return lib;
+    }
+
+    public int getDays() {
+        return d;
     }
 }

@@ -5,13 +5,15 @@ public class Main {
 
     ArrayList<Library> lib;
 
+    ArrayList<Integer> books;
+
     private void run() {
         parse();
     }
 
     private void parse() {
         Parser parser = new Parser();
-
+        books = parser.getBooks();
         lib = parser.getLibraries();
     }
 

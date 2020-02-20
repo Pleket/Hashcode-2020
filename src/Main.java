@@ -9,6 +9,7 @@ public class Main {
 
     private void run() {
         parse();
+        
     }
 
     private void parse() {

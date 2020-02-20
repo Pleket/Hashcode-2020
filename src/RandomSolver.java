@@ -36,7 +36,7 @@ public class RandomSolver {
 
         Output output = new Output();
         output.output(librariesSigned, lib, sol.noscanned, sol.scannedIds);
-        //System.out.println(optimalScore);
+        System.out.println(optimalScore);
     }
 
     public ArrayList<Library> getSolution() {

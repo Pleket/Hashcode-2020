@@ -1,7 +1,8 @@
 import java.util.*;
-import java.io.File;
 
 public class Main {
+    Scanner scanner = new Scanner(System.in);
+
     ArrayList<Library> lib;
 
     ArrayList<Integer> books;
@@ -13,6 +14,7 @@ public class Main {
         RandomSolver solver = new RandomSolver(lib, books, days);
         solver.solve();
         lib = solver.getSolution();
+
     }
 
     private void parse() {

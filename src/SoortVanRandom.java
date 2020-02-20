@@ -16,14 +16,16 @@ public class SoortVanRandom {
                 }
             });
 
-            Solution sol = new Solution(lib, books, days);
-            long optimalScore = sol.solve();
-            int librariesSigned = sol.curlib;
-
-            Output output = new Output();
-            output.output(librariesSigned, lib, sol.noscanned, sol.scannedIds);
-            System.out.println(optimalScore);
         }
+
+
+        Solution sol = new Solution(lib, books, days);
+        long optimalScore = sol.solve();
+        int librariesSigned = sol.curlib;
+
+        Output output = new Output();
+        output.output(librariesSigned, lib, sol.noscanned, sol.scannedIds);
+        System.out.println(optimalScore);
 
     }
 
